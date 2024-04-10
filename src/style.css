@@ -1,0 +1,686 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800;900&family=Poppins:wght@400&display=swap);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.gridrowfull {
+  width: 100%;
+}
+
+.gridrow {
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 750px) {
+  .gridrow {
+    width: 90%;
+  }
+}
+@media (min-width: 1200px) {
+  .gridrow {
+    width: 1170px;
+  }
+}
+
+.gridrowfull, .gridrow {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gridrowfull .col, .gridrow .col {
+  flex: 1;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.gridrowfull .col-1, .gridrow .col-1 {
+  box-sizing: border-box;
+  width: 8.3333333333%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.gridrowfull .offset-1, .gridrow .offset-1 {
+  margin-left: 8.3333333333%;
+}
+.gridrowfull .col-2, .gridrow .col-2 {
+  box-sizing: border-box;
+  width: 16.6666666667%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.gridrowfull .offset-2, .gridrow .offset-2 {
+  margin-left: 16.6666666667%;
+}
+.gridrowfull .col-3, .gridrow .col-3 {
+  box-sizing: border-box;
+  width: 25%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.gridrowfull .offset-3, .gridrow .offset-3 {
+  margin-left: 25%;
+}
+.gridrowfull .col-4, .gridrow .col-4 {
+  box-sizing: border-box;
+  width: 33.3333333333%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.gridrowfull .offset-4, .gridrow .offset-4 {
+  margin-left: 33.3333333333%;
+}
+.gridrowfull .col-5, .gridrow .col-5 {
+  box-sizing: border-box;
+  width: 41.6666666667%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.gridrowfull .offset-5, .gridrow .offset-5 {
+  margin-left: 41.6666666667%;
+}
+.gridrowfull .col-6, .gridrow .col-6 {
+  box-sizing: border-box;
+  width: 50%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.gridrowfull .offset-6, .gridrow .offset-6 {
+  margin-left: 50%;
+}
+.gridrowfull .col-7, .gridrow .col-7 {
+  box-sizing: border-box;
+  width: 58.3333333333%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.gridrowfull .offset-7, .gridrow .offset-7 {
+  margin-left: 58.3333333333%;
+}
+.gridrowfull .col-8, .gridrow .col-8 {
+  box-sizing: border-box;
+  width: 66.6666666667%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.gridrowfull .offset-8, .gridrow .offset-8 {
+  margin-left: 66.6666666667%;
+}
+.gridrowfull .col-9, .gridrow .col-9 {
+  box-sizing: border-box;
+  width: 75%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.gridrowfull .offset-9, .gridrow .offset-9 {
+  margin-left: 75%;
+}
+.gridrowfull .col-10, .gridrow .col-10 {
+  box-sizing: border-box;
+  width: 83.3333333333%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.gridrowfull .offset-10, .gridrow .offset-10 {
+  margin-left: 83.3333333333%;
+}
+.gridrowfull .col-11, .gridrow .col-11 {
+  box-sizing: border-box;
+  width: 91.6666666667%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.gridrowfull .offset-11, .gridrow .offset-11 {
+  margin-left: 91.6666666667%;
+}
+.gridrowfull .col-12, .gridrow .col-12 {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.gridrowfull .offset-12, .gridrow .offset-12 {
+  margin-left: 100%;
+}
+@media (min-width: 750px) {
+  .gridrowfull .col-t, .gridrow .col-t {
+    flex: 1;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-t, .gridrow .offset-t {
+    margin-left: 0;
+  }
+  .gridrowfull .col-t-1, .gridrow .col-t-1 {
+    box-sizing: border-box;
+    width: 8.3333333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-t-1, .gridrow .offset-t-1 {
+    margin-left: 8.3333333333%;
+  }
+  .gridrowfull .col-t-2, .gridrow .col-t-2 {
+    box-sizing: border-box;
+    width: 16.6666666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-t-2, .gridrow .offset-t-2 {
+    margin-left: 16.6666666667%;
+  }
+  .gridrowfull .col-t-3, .gridrow .col-t-3 {
+    box-sizing: border-box;
+    width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-t-3, .gridrow .offset-t-3 {
+    margin-left: 25%;
+  }
+  .gridrowfull .col-t-4, .gridrow .col-t-4 {
+    box-sizing: border-box;
+    width: 33.3333333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-t-4, .gridrow .offset-t-4 {
+    margin-left: 33.3333333333%;
+  }
+  .gridrowfull .col-t-5, .gridrow .col-t-5 {
+    box-sizing: border-box;
+    width: 41.6666666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-t-5, .gridrow .offset-t-5 {
+    margin-left: 41.6666666667%;
+  }
+  .gridrowfull .col-t-6, .gridrow .col-t-6 {
+    box-sizing: border-box;
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-t-6, .gridrow .offset-t-6 {
+    margin-left: 50%;
+  }
+  .gridrowfull .col-t-7, .gridrow .col-t-7 {
+    box-sizing: border-box;
+    width: 58.3333333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-t-7, .gridrow .offset-t-7 {
+    margin-left: 58.3333333333%;
+  }
+  .gridrowfull .col-t-8, .gridrow .col-t-8 {
+    box-sizing: border-box;
+    width: 66.6666666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-t-8, .gridrow .offset-t-8 {
+    margin-left: 66.6666666667%;
+  }
+  .gridrowfull .col-t-9, .gridrow .col-t-9 {
+    box-sizing: border-box;
+    width: 75%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-t-9, .gridrow .offset-t-9 {
+    margin-left: 75%;
+  }
+  .gridrowfull .col-t-10, .gridrow .col-t-10 {
+    box-sizing: border-box;
+    width: 83.3333333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-t-10, .gridrow .offset-t-10 {
+    margin-left: 83.3333333333%;
+  }
+  .gridrowfull .col-t-11, .gridrow .col-t-11 {
+    box-sizing: border-box;
+    width: 91.6666666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-t-11, .gridrow .offset-t-11 {
+    margin-left: 91.6666666667%;
+  }
+  .gridrowfull .col-t-12, .gridrow .col-t-12 {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-t-12, .gridrow .offset-t-12 {
+    margin-left: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .gridrowfull .col-d, .gridrow .col-d {
+    flex: 1;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-d, .gridrow .offset-d {
+    margin-left: 0;
+  }
+  .gridrowfull .col-d-1, .gridrow .col-d-1 {
+    box-sizing: border-box;
+    width: 8.3333333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-d-1, .gridrow .offset-d-1 {
+    margin-left: 8.3333333333%;
+  }
+  .gridrowfull .col-d-2, .gridrow .col-d-2 {
+    box-sizing: border-box;
+    width: 16.6666666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-d-2, .gridrow .offset-d-2 {
+    margin-left: 16.6666666667%;
+  }
+  .gridrowfull .col-d-3, .gridrow .col-d-3 {
+    box-sizing: border-box;
+    width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-d-3, .gridrow .offset-d-3 {
+    margin-left: 25%;
+  }
+  .gridrowfull .col-d-4, .gridrow .col-d-4 {
+    box-sizing: border-box;
+    width: 33.3333333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-d-4, .gridrow .offset-d-4 {
+    margin-left: 33.3333333333%;
+  }
+  .gridrowfull .col-d-5, .gridrow .col-d-5 {
+    box-sizing: border-box;
+    width: 41.6666666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-d-5, .gridrow .offset-d-5 {
+    margin-left: 41.6666666667%;
+  }
+  .gridrowfull .col-d-6, .gridrow .col-d-6 {
+    box-sizing: border-box;
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-d-6, .gridrow .offset-d-6 {
+    margin-left: 50%;
+  }
+  .gridrowfull .col-d-7, .gridrow .col-d-7 {
+    box-sizing: border-box;
+    width: 58.3333333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-d-7, .gridrow .offset-d-7 {
+    margin-left: 58.3333333333%;
+  }
+  .gridrowfull .col-d-8, .gridrow .col-d-8 {
+    box-sizing: border-box;
+    width: 66.6666666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-d-8, .gridrow .offset-d-8 {
+    margin-left: 66.6666666667%;
+  }
+  .gridrowfull .col-d-9, .gridrow .col-d-9 {
+    box-sizing: border-box;
+    width: 75%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-d-9, .gridrow .offset-d-9 {
+    margin-left: 75%;
+  }
+  .gridrowfull .col-d-10, .gridrow .col-d-10 {
+    box-sizing: border-box;
+    width: 83.3333333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-d-10, .gridrow .offset-d-10 {
+    margin-left: 83.3333333333%;
+  }
+  .gridrowfull .col-d-11, .gridrow .col-d-11 {
+    box-sizing: border-box;
+    width: 91.6666666667%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-d-11, .gridrow .offset-d-11 {
+    margin-left: 91.6666666667%;
+  }
+  .gridrowfull .col-d-12, .gridrow .col-d-12 {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gridrowfull .offset-d-12, .gridrow .offset-d-12 {
+    margin-left: 100%;
+  }
+}
+.gridrowfull.nogutter .col, .gridrowfull.nogutter .col-t, .gridrowfull.nogutter .col-d, .gridrow.nogutter .col, .gridrow.nogutter .col-t, .gridrow.nogutter .col-d {
+  padding: 0;
+}
+.gridrowfull.nogutter .col-1, .gridrowfull.nogutter .col-t-1, .gridrowfull.nogutter .col-d-1, .gridrow.nogutter .col-1, .gridrow.nogutter .col-t-1, .gridrow.nogutter .col-d-1 {
+  padding: 0;
+}
+.gridrowfull.nogutter .col-2, .gridrowfull.nogutter .col-t-2, .gridrowfull.nogutter .col-d-2, .gridrow.nogutter .col-2, .gridrow.nogutter .col-t-2, .gridrow.nogutter .col-d-2 {
+  padding: 0;
+}
+.gridrowfull.nogutter .col-3, .gridrowfull.nogutter .col-t-3, .gridrowfull.nogutter .col-d-3, .gridrow.nogutter .col-3, .gridrow.nogutter .col-t-3, .gridrow.nogutter .col-d-3 {
+  padding: 0;
+}
+.gridrowfull.nogutter .col-4, .gridrowfull.nogutter .col-t-4, .gridrowfull.nogutter .col-d-4, .gridrow.nogutter .col-4, .gridrow.nogutter .col-t-4, .gridrow.nogutter .col-d-4 {
+  padding: 0;
+}
+.gridrowfull.nogutter .col-5, .gridrowfull.nogutter .col-t-5, .gridrowfull.nogutter .col-d-5, .gridrow.nogutter .col-5, .gridrow.nogutter .col-t-5, .gridrow.nogutter .col-d-5 {
+  padding: 0;
+}
+.gridrowfull.nogutter .col-6, .gridrowfull.nogutter .col-t-6, .gridrowfull.nogutter .col-d-6, .gridrow.nogutter .col-6, .gridrow.nogutter .col-t-6, .gridrow.nogutter .col-d-6 {
+  padding: 0;
+}
+.gridrowfull.nogutter .col-7, .gridrowfull.nogutter .col-t-7, .gridrowfull.nogutter .col-d-7, .gridrow.nogutter .col-7, .gridrow.nogutter .col-t-7, .gridrow.nogutter .col-d-7 {
+  padding: 0;
+}
+.gridrowfull.nogutter .col-8, .gridrowfull.nogutter .col-t-8, .gridrowfull.nogutter .col-d-8, .gridrow.nogutter .col-8, .gridrow.nogutter .col-t-8, .gridrow.nogutter .col-d-8 {
+  padding: 0;
+}
+.gridrowfull.nogutter .col-9, .gridrowfull.nogutter .col-t-9, .gridrowfull.nogutter .col-d-9, .gridrow.nogutter .col-9, .gridrow.nogutter .col-t-9, .gridrow.nogutter .col-d-9 {
+  padding: 0;
+}
+.gridrowfull.nogutter .col-10, .gridrowfull.nogutter .col-t-10, .gridrowfull.nogutter .col-d-10, .gridrow.nogutter .col-10, .gridrow.nogutter .col-t-10, .gridrow.nogutter .col-d-10 {
+  padding: 0;
+}
+.gridrowfull.nogutter .col-11, .gridrowfull.nogutter .col-t-11, .gridrowfull.nogutter .col-d-11, .gridrow.nogutter .col-11, .gridrow.nogutter .col-t-11, .gridrow.nogutter .col-d-11 {
+  padding: 0;
+}
+.gridrowfull.nogutter .col-12, .gridrowfull.nogutter .col-t-12, .gridrowfull.nogutter .col-d-12, .gridrow.nogutter .col-12, .gridrow.nogutter .col-t-12, .gridrow.nogutter .col-d-12 {
+  padding: 0;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  color: #353535;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 14px;
+}
+@media (min-width: 750px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* ======================== */
+/* ======= HEADINGS ======= */
+/* ======================== */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.414;
+}
+
+h1, .h1, h2, .h2 {
+  font-size: 2.2rem;
+}
+
+p, li, div, span, a {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  color: #353535;
+}
+
+/* ============================== */
+/* ======= TEXT ALIGNMENT ======= */
+/* ============================== */
+.textleft {
+  text-align: left;
+}
+
+.textcenter {
+  text-align: center;
+}
+
+.textright {
+  text-align: right;
+}
+
+.hide-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  transition: left 1s cubic-bezier(0.5, 0, 0.15, 1);
+}
+.hide-login.active {
+  left: 50%;
+}
+.hide-login h2 {
+  color: #ffffff;
+  font-size: 3em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.login-section {
+  position: relative;
+  height: 100vh;
+  align-content: center;
+}
+
+.login-container {
+  height: 100%;
+  align-content: flex-start;
+  justify-content: center;
+  padding: 200px 50px !important;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+.login-container .login-title {
+  position: relative;
+}
+.login-container .login-title h3 {
+  font-size: 3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: block;
+}
+.login-container .login-title span {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: 300;
+  display: block;
+  color: #3c6e71;
+}
+.login-container .login-title::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: -30px;
+  width: 70%;
+  height: 2px;
+  border-radius: 15px;
+  background-color: #353535;
+}
+.login-container .login-items {
+  margin-top: 60px;
+}
+.login-container .login-items label {
+  display: block;
+  margin: 3px 0;
+  width: 100%;
+}
+.login-container .login-items input {
+  margin: 3px 0;
+  width: calc(70% + 20px);
+  border: none;
+  border-bottom: 1px solid #353535;
+  font-size: 1.2em;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.login-container .login-items input ~ label {
+  margin-top: 30px;
+}
+.login-container .login-items input::-moz-placeholder {
+  font-size: 0.8em;
+}
+.login-container .login-items input::placeholder {
+  font-size: 0.8em;
+}
+.login-container .login-items input.repeat-password {
+  margin-top: 20px;
+}
+.login-container .login-items span {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-top: 30px;
+  font-size: 0.8em;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  color: #3c6e71;
+}
+.login-container .login-items span:hover {
+  text-decoration: underline;
+}
+.login-container .login-items button {
+  display: block;
+  margin-top: 40px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #353535;
+  border-radius: 25px;
+  padding: 7px 25px;
+  cursor: pointer;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1em;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.login-container .login-items button:hover {
+  background-color: #3c6e71;
+  border-color: #3c6e71;
+  color: #ffffff;
+}
+
+@media (min-width: 850px) and (max-width: 1600px) {
+  body .login-container {
+    padding: 100px 50px 50px 50px !important;
+  }
+  body .login-container .login-title h3 {
+    font-size: 2em;
+  }
+  body .login-container .login-items input {
+    font-size: 1em;
+  }
+  body .login-container .login-items input ~ label {
+    margin-top: 20px;
+  }
+  body .login-container .login-title span {
+    margin-top: 10px;
+    font-size: 1em;
+  }
+}
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  padding: 20px 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  background-color: #353535;
+  z-index: 1;
+}
+.menu .page-title {
+  position: relative;
+  justify-content: center;
+}
+.menu .page-title a {
+  text-align: center;
+  width: 100%;
+  display: block;
+  color: #ffffff;
+  font-weight: 300;
+}/*# sourceMappingURL=style.css.map */

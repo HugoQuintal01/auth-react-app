@@ -1,0 +1,23 @@
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    padding: 20px 0;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    background-color: $primary;
+    z-index: 1;
+
+    .page-title{
+        position: relative;
+        justify-content: center;
+
+        a{
+            text-align: center;
+            width: 100%;
+            display: block;
+            color: $white;
+            font-weight: 300;
+        }
+    }
+}

@@ -1,0 +1,132 @@
+.login-container{
+    height: 100%;
+    align-content: flex-start;
+    justify-content: center;
+    padding: 200px 50px !important;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+
+    .login-title{
+        position: relative;
+        
+        h3{
+            font-size: 3em;
+            text-transform: uppercase;
+            font-weight: 600;
+            display: block;
+        }
+
+        span{
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: 300;
+            display: block;
+            color: $third;
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            left: 15px;
+            bottom: -30px;
+            width: 70%;
+            height: 2px;
+            border-radius: 15px;
+            background-color: $primary;
+        }
+    }
+
+    .login-items{
+        margin-top: 60px;
+
+        label{
+            display: block;
+            margin: 3px 0;
+            width: 100%;
+        }
+
+        input{
+            margin: 3px 0;
+            width: calc(70% + 20px);
+            border: none;
+            border-bottom: 1px solid $primary;
+            font-size: 1.2em;
+            padding: 5px;
+            background-color: $transparent;
+
+            & ~ label{
+                margin-top: 30px;
+            }
+
+            &::placeholder{
+                font-size: .8em;
+            }
+
+            &.repeat-password{
+                margin-top: 20px;
+            }
+
+        }
+
+        span{
+            width: 100%;
+            display: block;
+            position: relative;
+            margin-top: 30px;
+            font-size: 0.8em;
+            cursor: pointer;
+            transition-duration: .3s;
+            color: $third;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+        button{
+            display: block;
+            margin-top: 40px;
+            background-color: $transparent;
+            border: 1px solid $primary;
+            border-radius: 25px;
+            padding: 7px 25px;
+            cursor: pointer;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 1em;
+            cursor: pointer;
+            transition-duration: .3s;
+
+            &:hover{
+                background-color: $third;
+                border-color: $third;
+                color: $white;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 850px) and (max-width: 1600px) {
+    
+    body .login-container{
+        padding: 100px 50px 50px 50px !important;
+    }
+
+    body .login-container .login-title h3{
+        font-size: 2em;
+    }
+
+    body .login-container .login-items input{
+        font-size: 1em;
+    }
+
+    body .login-container .login-items input ~ label{
+        margin-top: 20px;
+    }
+
+    body .login-container .login-title span{
+        margin-top: 10px;
+        font-size: 1em;
+    }
+
+}
