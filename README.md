@@ -15,3 +15,7 @@ Auth-React-App is a sleek and functional authentication system built with React,
 - Authentication: Firebase Authentication, providing a secure and hassle-free authentication mechanism.
 - State Management: React Hooks for managing the application's state in a functional component architecture.
 - Styling: Modular CSS for responsive and maintainable design.
+
+
+Run:
+https://hugoquintal01.github.io/auth-react-app/
